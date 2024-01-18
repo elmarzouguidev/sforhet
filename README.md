@@ -1,14 +1,16 @@
 <p align="center">
-    <a href="https://wedoapp.ma" target="_blank">
-        <img src="./logo.jpg" alt="wedoapp">
+    <a href="https://sforhet.ma" target="_blank">
+        <img src="./logo.jpeg" alt="sforhet">
     </a>
 </p>
 
-## WEDOAPP
+## SFORHET WEBSITE
 
 ### Partners
 
-- **[WEDO APP](https://wedoapp.ma/)**
+- **[SFORHET](https://sforhet.ma/)**
   
 - **[Elmarzougui.com](https://elmarzougui.com/)**
+  
+- **[WEDOAPP](https://wedoapp.ma/)**
 

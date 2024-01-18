@@ -1,0 +1,9 @@
+<script src="{{ asset('assets/js/jquery-3.7.0.min.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ asset('assets/js/gsap.min.js') }}"></script>
+<script src="{{ asset('assets/js/Draggable.min.js') }}"></script>
+<script src="{{ asset('assets/js/swiper-bundle.min.js') }}"></script>
+<script src="{{ asset('assets/js/client-marquee.js') }}"></script>
+<script src="{{ asset('assets/js/theme-custom.js') }}"></script>
+{{-- <script src="{{ asset('assets/js/form1.js') }}"></script> --}}
+<script src="{{ asset('assets/js/subscribe-form.js') }}"></script>

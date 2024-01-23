@@ -5,7 +5,7 @@
 
     @include('layouts.__parts.metas')
 
-    <title>WEDO APP</title>
+    <title>SFORHET</title>
 
     @include('layouts.__parts.fonts_links')
 

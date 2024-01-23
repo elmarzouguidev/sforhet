@@ -4,13 +4,12 @@
             <div class="left">
                 <select class="country-select" name="country" id="country">
                     <option value="fr" selected>FR</option>
-                    <option value="en">EN</option>
                 </select>
             </div>
             <div class="right">
                 <p>
-                    Level up your business with <a href="{{ route('company.about') }}" data-word="WEDOAPP."
-                        id="dataWord">WEDOAPP.</a>
+                    Level up your business with <a href="{{ route('company.about') }}" data-word="SFORHET."
+                        id="dataWord">SFORHET.</a>
                 </p>
             </div>
         </div>

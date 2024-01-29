@@ -19,56 +19,7 @@
                     <img class="desktop fade-in" src="{{ asset('assets/imgs/bg1-1.png') }}" alt="Empowerment" />
                     <img class="mobile" src="{{ asset('assets/imgs/bg1.png') }}" alt="Empowerment" />
 
-                    <div class="experience-box simple-shadow bounce-in">
-                        <div class="experience-body d-flex align-items-center">
-                            <img src="{{ asset('assets/imgs/icon1.svg') }}" alt="Icon" />
 
-                            <div class="experience-content d-flex align-items-center">
-                                <h1>+8</h1>
-                                <p>
-                                    Years
-                                    <span>Experience</span>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bottom-content d-flex">
-                    <a href="./team.html" class="our-expert-team-box simple-shadow bounce-in delay-2">
-                        <div class="our-expert-team-box-inner d-flex align-items-center">
-                            <div class="imgs imgs1 d-flex align-items-center">
-                                <img src="{{ asset('assets/imgs/small-img-4.png') }}" alt="team" />
-                                <img src="{{ asset('assets/imgs/small-img-3.png') }}" alt="team" />
-                                <img src="{{ asset('assets/imgs/small-img-2.png') }}" alt="team" />
-                                <img src="{{ asset('assets/imgs/small-img-1.png') }}" alt="team" />
-                            </div>
-                            <p>
-                                Meet
-                                <span>Our Experts</span>
-                            </p>
-                        </div>
-                    </a>
-
-                    <div class="google-reviews-box simple-shadow bounce-in delay-3">
-                        <div class="left">
-                            <span>Verified by</span>
-                            <img src="{{ asset('assets/imgs/icon2.svg') }}" alt="Google" />
-                        </div>
-                        <div class="right">
-                            <div class="stars d-flex align-items-center">
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                                <i class="las la-star"></i>
-                            </div>
-                            <p>
-                                3245
-                                <span>Reviews</span>
-                            </p>
-                        </div>
-                    </div>
                 </div>
 
             </div>

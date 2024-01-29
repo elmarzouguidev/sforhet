@@ -2,6 +2,8 @@
 
 @section('content')
     @include('pages.home.section_a_hero')
+    @include('pages.home.section_b_about')
+    
     @include('pages.home.section_b_clients')
     @include('pages.home.section_c_how_wedo')
     @include('pages.home.section_d_services')

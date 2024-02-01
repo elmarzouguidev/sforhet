@@ -64,7 +64,7 @@ Route::group(['middleware' => 'web', 'compress_html'], function () {
     Route::get('/solution', [SolutionController::class, 'index'])->name('solution');
 
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
-    Route::get('/services/{service}', [ServiceController::class, 'single'])->name('services.single');
+    Route::get('/services/{service:slug}', [ServiceController::class, 'single'])->name('services.single');
 
     Route::get('/faqs', [FaqController::class, 'index'])->name('faqs');
 

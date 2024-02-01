@@ -7,9 +7,9 @@
 
     @include('pages.service.single.section_c_about')
 
-    @include('pages.service.single.section_d_features')
+    {{-- @include('pages.service.single.section_d_features')
 
-    @include('pages.service.single.section_e_testimonial')
+    @include('pages.service.single.section_e_testimonial') --}}
 
     @include('pages.service.single.section_f_contact')
 @endsection

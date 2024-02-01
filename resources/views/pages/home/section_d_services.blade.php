@@ -1,40 +1,42 @@
-<section class="service-area">
+<section class="project-area">
     <div class="custom-container">
-        <div class="service-section-header section-header d-flex align-items-end justify-content-between">
-            <div class="left">
-                <h5 class="section-subtitle">WHAT WE’RE OFFERING</h5>
-                <h1 class="section-title">Dealing in all professional <br>IT services.</h1>
-            </div>
-            <p>One fundamental aspect of IT services is infrastructure management. This involves the design,
-                implementation, and maintenance of the hardware, software, networks, and servers.</p>
-        </div>
+        <div class="custom-row justify-content-between">
+            <div class="project-left-details">
+                <h5 class="section-subtitle">Nos services</h5>
+                <h1 class="section-title">Nos services</h1>
 
-        <div class="services-list d-flex">
-            <div class="service-card simple-shadow">
-                <img src="{{ asset('assets/imgs/service-icon-1.svg') }}" alt="Service Icon" class="service-icon" />
-                <h3><a href="./service-details.html">Development</a></h3>
-                <p>Our development is pixel perfect in all ways.</p>
+                <p>{{ $pageService->excerpt }}</p>
+                {{-- <ul>
+                    <li>
+                        <i class="las la-check"></i> Managed Services and Products
+                    </li>
+                    <li>
+                        <i class="las la-check"></i> Flexibility and Adaptability
+                    </li>
+                    <li>
+                        <i class="las la-check"></i> Competitive Advantage
+                    </li>
+                </ul> --}}
             </div>
-            <div class="service-card simple-shadow">
-                <img src="{{ asset('assets/imgs/service-icon-2.svg') }}" alt="Service Icon" class="service-icon" />
-                <h3><a href="./service-details.html">Woo Commerce</a></h3>
-                <p>We have a best team for your shopping websites.</p>
-            </div>
-            <div class="service-card simple-shadow">
-                <img src="{{ asset('assets/imgs/service-icon-3.svg') }}" alt="Service Icon" class="service-icon" />
-                <h3><a href="./service-details.html">CRM Solutions</a></h3>
-                <p>We enhance customer experiences for success.</p>
-            </div>
-            <div class="service-card simple-shadow">
-                <img src="{{ asset('assets/imgs/service-icon-4.svg') }}" alt="Service Icon" class="service-icon" />
-                <h3><a href="./service-details.html">Web Design</a></h3>
-                <p>We create vibrant, intuitive and minimalist web</p>
-            </div>
-            <div class="service-card simple-shadow">
-                <span class="service-badge">Free!</span>
-                <img src="{{ asset('assets/imgs/service-icon-5.svg') }}" alt="Service Icon" class="service-icon" />
-                <h3><a href="./service-details.html">IT Support</a></h3>
-                <p>We offers expert assistance for your IT issues.</p>
+
+            <div class="project-right-slider">
+                <div class="project-right-slider-inner">
+
+                    <div class="swiper project-slider">
+                        <div class="swiper-wrapper">
+                            @foreach ($services as $service)
+                                <div class="swiper-slide project-item">
+                                    <div class="project-item-inner">
+                                        <h2><a href="{{route('services.single',$service->slug)}}">{{ $service->name }}</a></h2>
+                                        <img src="{{ Voyager::image($service->image) }}" alt="{{ $service->name }}" />
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

@@ -8,12 +8,9 @@
                     <p>At Slack, we are more than just a company, we are a catalyst for growth.</p>
                 </div>
                 <div class="content-body">
-                    <p>Our journey is guided by a clear vision - to be at the forefront of transformative
-                        solutions that shape industries and enrich lives. This vision is deeply rooted in our
-                        core values: excellence, innovation, integrity, and collaboration. </p>
-                    <p>Excellence is the hallmark of everything we do. From delivering cutting-edge technologies
-                        to providing unparalleled services, we are relentless in our pursuit of perfection. Our
-                        commitment to excellence drives us.</p>
+                    <p>
+                        {{ $pageAbout->excerpt }}
+                    </p>
                     {{-- <ul>
                         <li>
                             <i class="las la-check"></i> Collaboration Tools
@@ -32,7 +29,7 @@
             </div>
 
             <div class="img-box">
-                <img src="{{ asset('assets/imgs/about-service-6.jpg') }}" alt="SFORHET" />
+                <img src="{{ Voyager::image($pageAbout->image) }}" alt=" {{ $pageAbout->title }}" />
             </div>
         </div>
     </div>

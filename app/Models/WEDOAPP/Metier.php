@@ -1,28 +1,28 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models\WEDOAPP;
 
 use App\Traits\GetModelByKeyName;
-use App\Traits\HasSlug;
-use App\Traits\Seoable;
 use App\Traits\UuidGenerator;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class Metier extends Model
 {
     use HasFactory;
     use UuidGenerator;
     use GetModelByKeyName;
-    use HasSlug;
-    use Seoable;
+    
+
     /**
      * @var string[]|array<int,string>
      */
     protected $fillable = [
         'uuid',
-
-
+        
+        
         'is_active',
     ];
 
@@ -32,7 +32,6 @@ class Service extends Model
     protected $casts = [
         'is_active' => 'boolean',
     ];
-
 
     // Relationships
 

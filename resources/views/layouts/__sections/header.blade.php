@@ -26,10 +26,10 @@
                             <a href="{{ route('cabinet') }}">Notre cabinet</a>
                         </li>
                         <li>
-                            <a href="{{ route('home') }}">Espace candidats</a>
+                            <a href="{{ route('candidats') }}">Espace candidats</a>
                         </li>
                         <li>
-                            <a href="{{ route('home') }}">Espace entreprise</a>
+                            <a href="{{ route('entreprise') }}">Espace entreprise</a>
                         </li>
                         <li>
                             <a href="{{ route('offres') }}">Nos offres</a>

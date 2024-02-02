@@ -20,4 +20,6 @@ class CabinetController extends Controller
 
         return view('pages.cabinet.index', compact('pageAbout', 'pageHistoir', 'pageFoundateur', 'pagePartner', 'partners'));
     }
+
+    
 }

@@ -4,6 +4,7 @@ use App\Http\Controllers\WEDOAPP\BlogController;
 use App\Http\Controllers\WEDOAPP\CabinetController;
 use App\Http\Controllers\WEDOAPP\CareerController;
 use App\Http\Controllers\WEDOAPP\CompanyController;
+use App\Http\Controllers\WEDOAPP\CondidatController;
 use App\Http\Controllers\WEDOAPP\ContactUsController;
 use App\Http\Controllers\WEDOAPP\EventController;
 use App\Http\Controllers\WEDOAPP\FaqController;
@@ -71,7 +72,9 @@ Route::group(['middleware' => 'web', 'compress_html'], function () {
     Route::get('/nos-offres', [OffreController::class, 'index'])->name('offres');
     Route::get('/nos-offres/{offre:slug}', [OffreController::class, 'single'])->name('offres.single');
     Route::get('/cabinet', [CabinetController::class, 'index'])->name('cabinet');
-
+    Route::get('/espace-candidats', [CondidatController::class, 'index'])->name('candidats');
+    Route::get('/espace-entreprise', [CondidatController::class, 'entreprise'])->name('entreprise');
+    
     Route::get('/faqs', [FaqController::class, 'index'])->name('faqs');
 
     Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolios');

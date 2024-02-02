@@ -69,8 +69,6 @@
         </div>
     </div>
 
-
-
     <div class="copyright-area">
         <div class="custom-container">
             <div class="custom-row d-flex align-items-center justify-content-between">

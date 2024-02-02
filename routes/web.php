@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\WEDOAPP\BlogController;
+use App\Http\Controllers\WEDOAPP\CabinetController;
 use App\Http\Controllers\WEDOAPP\CareerController;
 use App\Http\Controllers\WEDOAPP\CompanyController;
 use App\Http\Controllers\WEDOAPP\ContactUsController;
@@ -8,6 +9,7 @@ use App\Http\Controllers\WEDOAPP\EventController;
 use App\Http\Controllers\WEDOAPP\FaqController;
 use App\Http\Controllers\WEDOAPP\FeatureController;
 use App\Http\Controllers\WEDOAPP\HomeController;
+use App\Http\Controllers\WEDOAPP\OffreController;
 use App\Http\Controllers\WEDOAPP\OverviewController;
 use App\Http\Controllers\WEDOAPP\PartnerController;
 use App\Http\Controllers\WEDOAPP\PortfolioController;
@@ -65,6 +67,10 @@ Route::group(['middleware' => 'web', 'compress_html'], function () {
 
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
     Route::get('/services/{service:slug}', [ServiceController::class, 'single'])->name('services.single');
+
+    Route::get('/nos-offres', [OffreController::class, 'index'])->name('offres');
+    Route::get('/nos-offres/{offre:slug}', [OffreController::class, 'single'])->name('offres.single');
+    Route::get('/cabinet', [CabinetController::class, 'index'])->name('cabinet');
 
     Route::get('/faqs', [FaqController::class, 'index'])->name('faqs');
 

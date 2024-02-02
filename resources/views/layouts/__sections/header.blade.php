@@ -23,7 +23,7 @@
                             <a href="{{ route('home') }}">Acceuil</a>
                         </li>
                         <li>
-                            <a href="{{ route('home') }}">Notre cabinet</a>
+                            <a href="{{ route('cabinet') }}">Notre cabinet</a>
                         </li>
                         <li>
                             <a href="{{ route('home') }}">Espace candidats</a>
@@ -32,7 +32,7 @@
                             <a href="{{ route('home') }}">Espace entreprise</a>
                         </li>
                         <li>
-                            <a href="{{ route('home') }}">Nos offres</a>
+                            <a href="{{ route('offres') }}">Nos offres</a>
                         </li>
 
                         <li class="mega-menu-item">

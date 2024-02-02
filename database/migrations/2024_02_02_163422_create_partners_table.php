@@ -11,19 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('offres', function (Blueprint $table) {
+        Schema::create('partners', function (Blueprint $table) {
             $table->id();
             $table->uuid()->nullable();
-            $table->string('title');
-            $table->string('slug');
+            $table->string('name');
+            $table->string('logo')->nullable();
             $table->mediumText('content')->nullable();
-            $table->longText('body')->nullable();
-            $table->string('image')->nullable();
-            $table->longText('svg')->nullable();
-
-            $table->date('offre_date')->nullable();
-            $table->string('offre_location')->nullable();
-            $table->json('options')->nullable();
 
             $table->boolean('is_active')->default(true);
             $table->timestamps();
@@ -35,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('offres');
+        Schema::dropIfExists('partners');
     }
 };

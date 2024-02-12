@@ -15,7 +15,7 @@
             <div class="feature-right">
                 <div class="feature-content">
                     <h5 class="section-subtitle">NOS ESPACES</h5>
-                    <h1 class="section-title" style="color:#F6950C !important">{{ setting('home.espace_title') }}
+                    <h1 class="section-title">{{ setting('home.espace_title') }}
                     </h1>
                     {{-- <ul>
                         <li>

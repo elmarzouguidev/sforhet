@@ -34,7 +34,7 @@ class OffreController extends Controller
         // $request->dd();
         $offre = Offre::whereUuid($request->offre)->first();
 
-        Mail::to(config('sforhet.email'))->send(new CandidatOffreMail(array_merge($request->validated(), ['offre' => $offre?->toArray()])));
+        Mail::to(config('sforhet.email_candidat'))->send(new CandidatOffreMail(array_merge($request->validated(), ['offre' => $offre?->toArray()])));
 
         if (empty(Mail::flushMacros())) {
 

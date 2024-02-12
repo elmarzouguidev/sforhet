@@ -5,6 +5,7 @@ namespace App\Http\Controllers\WEDOAPP;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\WEDOAPP\Candidat\CandidatFormRequest;
 use App\Http\Requests\WEDOAPP\Entreprise\EntrepriseFormRequest;
+use App\Mail\WEDOAPP\Candidat\CandidatMail;
 use App\Mail\WEDOAPP\Entreprise\EntrepriseMail;
 use App\Models\WEDOAPP\Candidat;
 use App\Models\WEDOAPP\City;
@@ -47,7 +48,14 @@ class CondidatController extends Controller
         $candidat->city()->associate($newCity);
         $candidat->save();
 
-        return redirect(route('candidats'))->with('success', 'Votre Demande  été envoyer avec success');
+        Mail::to(config('sforhet.email_candidat'))->send(new CandidatMail($request->validated()));
+
+        if (empty(Mail::flushMacros())) {
+
+            return redirect()->back()->with('success', 'Merci votre demande a été envoyer avec succès');
+        } else {
+            return redirect()->back()->with('error', 'Erreur !! merci de ressayer');
+        }
     }
 
     public function storeEntreprise(EntrepriseFormRequest $request)

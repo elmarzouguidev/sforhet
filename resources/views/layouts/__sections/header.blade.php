@@ -5,11 +5,11 @@
             <div class="header-left d-flex align-items-center">
                 <a href="{{ route('home') }}" class="logo">
                     {{-- <img src="{{ asset('assets/imgs/logo.svg') }}" alt="SFORHET logo" /> --}}
-                    <x-application-logo width="100" alt="SFORHET logo" />
+                    <x-application-logo alt="SFORHET logo" />
                 </a>
 
                 <div class="header-left-right">
-                    <a href="contact.html" class="theme-btn">Contact Us</a>
+                    <a href="contact.html" class="theme-btn">Contact</a>
                     <span class="menu-bar">
                         <i class="las la-bars"></i>
                     </span>

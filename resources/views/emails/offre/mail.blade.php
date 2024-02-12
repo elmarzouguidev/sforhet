@@ -5,13 +5,13 @@
 <p>Date nissance : {{ $data['date_nissance'] }}</p>
 <hr>
 
-<p>adresse : {{ $data['adresse'] }}</p>
+<p>Adresse : {{ $data['adresse'] }}</p>
 <br>
-<p>ville : {{ $data['ville'] }}</p>
+<p>Ville : {{ $data['ville'] }}</p>
 <br>
-<p>diplome : {{ $data['diplome'] }}</p>
+<p>Diplome : {{ $data['diplome'] }}</p>
 <br>
-<p>filiere : {{ $data['filiere'] }}</p>
+<p>Filiere : {{ $data['filiere'] }}</p>
 <hr>
 
 <p>Offre : <b>{{ $data['offre']['title'] }}</b></p>

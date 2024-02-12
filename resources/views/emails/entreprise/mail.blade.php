@@ -6,8 +6,8 @@
 <br>
 <p>Raison sociale : <b>{{ $data['raison_sociale'] }}</b></p>
 <br>
-<p>ville : {{ $data['ville'] }}</p>
+<p>Ville : {{ $data['ville'] }}</p>
 <br>
-<p>email : {{ $data['email'] }}</p>
+<p>Email : {{ $data['email'] }}</p>
 <hr>
 <p>Détail de la demande : {{ $data['demande'] }}</p>

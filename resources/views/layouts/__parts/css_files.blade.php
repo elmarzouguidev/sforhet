@@ -5,3 +5,4 @@
 <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}" />
 <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?ver={{ rand(10, 850) }}">
 <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}?ver={{ rand(10, 850) }}">
+<link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}?ver={{ rand(10, 850) }}">

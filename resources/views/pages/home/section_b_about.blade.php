@@ -5,7 +5,6 @@
                 <div class="section-header">
                     <h5 class="section-subtitle">A propos de nous !</h5>
                     <h1 class="section-title">SFORHET</h1>
-                    <p>At Slack, we are more than just a company, we are a catalyst for growth.</p>
                 </div>
                 <div class="content-body">
                     <p>

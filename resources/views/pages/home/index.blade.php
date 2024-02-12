@@ -6,9 +6,11 @@
 
     @include('pages.home.section_d_services')
 
+    @include('pages.home.section_j_features')
+
     @include('pages.home.__offres')
 
-    {{-- @include('pages.home.section_b_clients')
+    {{--@include('pages.home.section_b_clients')
     @include('pages.home.section_c_how_wedo')
    
     @include('pages.home.section_e_cases')
@@ -16,6 +18,6 @@
     @include('pages.home.section_g_testimonial')
     @include('pages.home.section_h_projects')
     @include('pages.home.section_i_news')
-    @include('pages.home.section_j_features')
-    @include('pages.home.section_k_contact') --}}
+   
+    @include('pages.home.section_k_contact')--}}
 @endsection

@@ -18,6 +18,28 @@
                 </div>
 
                 <div class="hero-contact-form">
+                    @if (session('success'))
+                        <div class="col-lg-12">
+                            <div class="alert alert-success" role="alert" style="font-size: 20px;">
+
+                                <i class="mdi mdi-check-all me-2"></i>
+                                {{ session('success') }}
+
+                            </div>
+                        </div>
+                    @endif
+                    @if (session('error'))
+                        <div class="col-lg-12">
+
+                            <div class="alert alert-danger" role="alert" style="font-size: 20px;">
+
+                                <i class="mdi mdi-check-all me-2"></i>
+                                {{ session('error') }}
+
+                            </div>
+
+                        </div>
+                    @endif
                     <form id="contactForm" action="{{ route('entreprise.store') }}" method="post" class="contact-form">
                         @csrf
                         @honeypot
@@ -110,8 +132,8 @@
                             <div class="input-row">
                                 <div class="input-group">
                                     <label for="demande">Détail de la demande</label>
-                                    <textarea name="demande" id="demande" rows="2" placeholder="" class="@error('demande') is-invalid @enderror"
-                                        required>{{ old('demande') }}</textarea>
+                                    <textarea name="demande" id="demande" rows="2" placeholder=""
+                                        class="@error('demande') is-invalid @enderror" required>{{ old('demande') }}</textarea>
                                     @error('demande')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

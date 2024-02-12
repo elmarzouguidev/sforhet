@@ -18,6 +18,28 @@
                 </div>
 
                 <div class="hero-contact-form">
+                    @if (session('success'))
+                        <div class="col-lg-12">
+                            <div class="alert alert-success" role="alert" style="font-size: 20px;">
+
+                                <i class="mdi mdi-check-all me-2"></i>
+                                {{ session('success') }}
+
+                            </div>
+                        </div>
+                    @endif
+                    @if (session('error'))
+                        <div class="col-lg-12">
+
+                            <div class="alert alert-danger" role="alert" style="font-size: 20px;">
+
+                                <i class="mdi mdi-check-all me-2"></i>
+                                {{ session('error') }}
+
+                            </div>
+
+                        </div>
+                    @endif
                     <form id="contactForm" action="{{ route('candidats.store') }}" method="post" class="contact-form">
                         @csrf
                         @honeypot
@@ -114,8 +136,9 @@
                             <div class="input-row">
                                 <div class="input-group">
                                     <label for="filiere">Filière</label>
-                                    <input type="text" id="filiere" name="filiere" value="{{ old('filiere') }}"
-                                        class="@error('filiere') is-invalid @enderror" placeholder="Filière" required />
+                                    <input type="text" id="filiere" name="filiere"
+                                        value="{{ old('filiere') }}" class="@error('filiere') is-invalid @enderror"
+                                        placeholder="Filière" required />
                                     @error('filiere')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

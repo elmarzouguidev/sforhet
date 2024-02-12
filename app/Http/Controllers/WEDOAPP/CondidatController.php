@@ -43,6 +43,7 @@ class CondidatController extends Controller
         $candidat->quartier = $request->quartier;
         $candidat->diplome = $request->diplome;
         $candidat->filiere = $request->filiere;
+        $candidat->telephone = $request->phone;
         $candidat->city()->associate($newCity);
         $candidat->save();
 

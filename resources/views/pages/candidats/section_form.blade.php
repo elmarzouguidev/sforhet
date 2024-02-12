@@ -68,8 +68,18 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="input-row col-lg-6"">
-
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="phone">Téléphone</label>
+                                    <input type="text" id="phone" name="phone" placeholder="Téléphone"
+                                        value="{{ old('phone') }}" class="@error('phone') is-invalid @enderror"
+                                        required />
+                                    @error('phone')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
                             <div class="input-row">
                                 <div class="input-group">
@@ -124,8 +134,9 @@
                             <div class="input-row">
                                 <div class="input-group">
                                     <label for="diplome">Diplôme</label>
-                                    <input type="text" id="diplome" name="diplome" value="{{ old('diplome') }}"
-                                        class="@error('diplome') is-invalid @enderror" placeholder="Diplôme" required />
+                                    <input type="text" id="diplome" name="diplome"
+                                        value="{{ old('diplome') }}" class="@error('diplome') is-invalid @enderror"
+                                        placeholder="Diplôme" required />
                                     @error('diplome')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>

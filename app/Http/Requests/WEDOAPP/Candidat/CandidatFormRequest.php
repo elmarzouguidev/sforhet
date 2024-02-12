@@ -24,7 +24,7 @@ class CandidatFormRequest extends FormRequest
         return [
             'nom' => ['required', 'string', 'max:100'],
             'prenom' => ['required', 'string', 'max:100'],
-            'phone' => ['nullable', 'string', 'max:30', 'phone:MA'],
+            'phone' => ['required', 'string', 'max:30', 'phone:MA'],
             'adresse' => ['required', 'string'],
             'quartier' => ['required', 'string'],
             'ville' => ['required', 'string', 'max:100'],

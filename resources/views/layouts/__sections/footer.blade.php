@@ -74,22 +74,22 @@
             <div class="custom-row d-flex align-items-center justify-content-between">
                 <ul class="social-links d-flex align-items-center">
                     <li>
-                        <a href="#">
-                            <i class="iconoir-dribbble"></i>
+                        <a href="{{ setting('social-media.facebook') ?? '#' }}">
+                            <i class="iconoir-facebook"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/wedoappma" target="__blank">
+                        <a href="{{ setting('social-media.twitter') ?? '#' }}" target="__blank">
                             <i class="iconoir-twitter"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.instagram.com/wedoapp.ma/" target="__blank">
+                        <a href="{{ setting('social-media.instagram') ?? '#' }}" target="__blank">
                             <i class="iconoir-instagram"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/company/wedoapp-ma" target="__blank">
+                        <a href="{{ setting('social-media.linkedin') ?? '#' }}" target="__blank">
                             <i class="iconoir-linkedin"></i>
                         </a>
                     </li>

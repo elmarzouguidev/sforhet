@@ -3,11 +3,11 @@
         <div class="custom-row align-items-center">
             <div class="feature-left d-flex">
                 <div class="feature-img-card">
-                    <h3>Espace <br> candidats</h3>
+                    <h3 style="color:#0B6DB1 !important">Espace <br> candidats</h3>
                     <img src="{{ Voyager::image(setting('home.candidat_image')) }}" alt="Espace candidats" />
                 </div>
                 <div class="feature-img-card">
-                    <h3>Espace <br> entreprise</h3>
+                    <h3 style="color:#0B6DB1 !important">Espace <br> entreprise</h3>
                     <img src="{{ Voyager::image(setting('home.entreprise_image')) }}" alt="Espace entreprise" />
                 </div>
             </div>

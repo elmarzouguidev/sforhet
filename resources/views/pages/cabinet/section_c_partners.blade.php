@@ -13,8 +13,6 @@
             @foreach ($partners as $partner)
                 <div class="service-card simple-shadow">
                     <img src="{{ Voyager::image($partner->logo) }}" alt="{{ $partner->name }}" class="service-icon" />
-                    <h3><a href="service-details.html">{{ $partner->name }}</a></h3>
-                    <p>{{ $partner->name }}</p>
                 </div>
             @endforeach
         </div>

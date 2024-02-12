@@ -10,6 +10,7 @@ use App\Http\Controllers\WEDOAPP\EventController;
 use App\Http\Controllers\WEDOAPP\FaqController;
 use App\Http\Controllers\WEDOAPP\HomeController;
 use App\Http\Controllers\WEDOAPP\OffreController;
+use App\Http\Controllers\WEDOAPP\PagesController;
 use App\Http\Controllers\WEDOAPP\PartnerController;
 use App\Http\Controllers\WEDOAPP\ServiceController;
 use App\Http\Controllers\WEDOAPP\TeamController;
@@ -67,6 +68,8 @@ Route::group(['middleware' => ['web', 'compress_html']], function () {
     Route::post('/espace-entreprise', [CondidatController::class, 'storeEntreprise'])->middleware('check_spam')->name('entreprise.store');
 
     Route::get('/faqs', [FaqController::class, 'index'])->name('faqs');
+
+    Route::get('/page/{page}', [PagesController::class, 'page'])->name('pages.single');
 });
 
 Route::group(['prefix' => 'theadmin'], function () {

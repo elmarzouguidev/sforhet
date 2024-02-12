@@ -9,7 +9,7 @@
                 </a>
 
                 <div class="header-left-right">
-                    <a href="contact.html" class="theme-btn">Contact</a>
+                    <a href="{{ route('contact.us') }}" class="theme-btn">Contact</a>
                     <span class="menu-bar">
                         <i class="las la-bars"></i>
                     </span>
@@ -47,9 +47,14 @@
                                             <div class="mega-menu-link-wrap">
                                                 <div class="mega-menu-link">
                                                     <ul>
-                                                        <li><a href="#">Etudes</a></li>
-                                                        <li><a href="#">Formation</a></li>
-                                                        <li><a href="#">Recrutement</a></li>
+                                                        <li><a href="{{ route('pages.single', 'conseil') }}">Conseil</a>
+                                                        </li>
+                                                        <li><a
+                                                                href="{{ route('pages.single', 'formation') }}">Formation</a>
+                                                        </li>
+                                                        <li><a
+                                                                href="{{ route('pages.single', 'recrutement') }}">Recrutement</a>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>

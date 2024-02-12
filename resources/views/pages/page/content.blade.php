@@ -16,7 +16,11 @@
                 </div>
 
             </div>
-
+            <div class="btns-group d-flex">
+                <a href="{{ route('contact.us') }}" class="theme-btn2">Contactez-nous
+                    <i class="iconoir-arrow-up-right"></i>
+                </a>
+            </div>
         </div>
     </div>
 </section>

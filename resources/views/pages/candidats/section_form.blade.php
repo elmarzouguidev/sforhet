@@ -73,8 +73,8 @@
                             </div>
                             <div class="input-row">
                                 <div class="input-group">
-                                    <label for="date_nissance">Date de naissance</label>
-                                    <input type="date" id="date_nissance" name="date_nissance"
+                                    <label for="date_nissance">Date de naissance(d/m/Y)</label>
+                                    <input type="text" id="date_nissance" name="date_nissance"
                                         placeholder="Date de naissance" value="{{ old('date_nissance') }}"
                                         class="@error('date_nissance') is-invalid @enderror" required />
                                     @error('date_nissance')

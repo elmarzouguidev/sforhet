@@ -26,57 +26,6 @@
                                 North View, New York</p>
                         </div>
                     </div>
-                    <div class="contact-location-box">
-                        <div class="number">
-                            #2
-                        </div>
-                        <div class="content">
-                            <h3>Edinburgh, UK</h3>
-                            <p>5/3, Hilton Clinch, NS
-                                Bay Low, Aberdeen</p>
-                        </div>
-                    </div>
-                    <div class="contact-location-box">
-                        <div class="number">
-                            #3
-                        </div>
-                        <div class="content">
-                            <h3>Cape Town, SA</h3>
-                            <p>Marco Street, Seventh
-                                Road, Cape Town</p>
-                        </div>
-                    </div>
-                    <div class="contact-location-box">
-                        <div class="number">
-                            #4
-                        </div>
-                        <div class="content">
-                            <h3>Madras, IND</h3>
-                            <p>3/5, Geils Street
-                                Mannady, Madras</p>
-                        </div>
-                    </div>
-                    <div class="contact-location-box">
-                        <div class="number">
-                            #5
-                        </div>
-                        <div class="content">
-                            <h3>Tokyo, JAP</h3>
-                            <p>77, Xiong Street, Main
-                                Town, Tokyo, Japan</p>
-                        </div>
-                    </div>
-                    <div class="contact-location-box">
-                        <div class="number">
-                            #6
-                        </div>
-                        <div class="content">
-                            <h3>Canberra, AUS</h3>
-                            <p>458, Highland Street,
-                                Sydney, Australia</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>

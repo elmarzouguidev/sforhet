@@ -88,18 +88,18 @@ Input, textarea:  10px 'Syne', sans-serif
 
 /* Varialbes */
 :root {
-    --dark1: #1c1c1c;
+    --dark1: #1C1C1C;
     --dark2: #454545;
-    --light_white: #f9f9f9;
-    --primary_color: #f6950c;
-    --primary_color2: #4f8dff;
-    --primary_light: #f3f6fd;
+    --light_white: #F9F9F9;
+    --primary_color: #1351D8;
+    --primary_color2: #4F8DFF;
+    --primary_light: #F3F6FD;
     --primary_light2: rgb(19 81 216 / 10%);
-    --gray: #d9d9d9;
-    --font_syne: "Syne", sans-serif;
-    --font_yantramanv: "Yantramanav", sans-serif;
-    --font_dm: "DM Sans", sans-serif;
-    --yellow_color: #ffd600;
+    --gray: #D9D9D9;
+    --font_syne: 'Syne', sans-serif;
+    --font_yantramanv: 'Yantramanav', sans-serif;
+    --font_dm: 'DM Sans', sans-serif;
+    --yellow_color: #FFD600;
 }
 
 /* ============================================================== 

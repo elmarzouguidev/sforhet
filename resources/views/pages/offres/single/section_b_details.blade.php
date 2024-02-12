@@ -7,7 +7,7 @@
 
             <div class="content-box">
 
-                <p>{!! $offre->body !!}</p>
+                {!! $offre->body !!}
 
                 <ul>
                     <li>

@@ -72,8 +72,12 @@ Route::group(['middleware' => 'web', 'compress_html'], function () {
     Route::get('/nos-offres', [OffreController::class, 'index'])->name('offres');
     Route::get('/nos-offres/{offre:slug}', [OffreController::class, 'single'])->name('offres.single');
     Route::get('/cabinet', [CabinetController::class, 'index'])->name('cabinet');
+
     Route::get('/espace-candidats', [CondidatController::class, 'index'])->name('candidats');
+    Route::post('/espace-candidats', [CondidatController::class, 'storeCandidat'])->name('candidats.store');
+
     Route::get('/espace-entreprise', [CondidatController::class, 'entreprise'])->name('entreprise');
+    Route::post('/espace-entreprise', [CondidatController::class, 'storeEntreprise'])->name('entreprise.store');
     
     Route::get('/faqs', [FaqController::class, 'index'])->name('faqs');
 

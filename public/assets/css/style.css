@@ -1222,9 +1222,9 @@ img {
 .hero-contact-form .contact-form .input-row .input-group {
     margin-bottom: 35px;
 }
-.hero-contact-form .contact-form .input-row .input-group textarea {
+/*.hero-contact-form .contact-form .input-row .input-group textarea {
     height: 213px;
-}
+}*/
 .hero-contact-form .contact-form .input-row .input-group .choice-a-company {
     gap: 10px;
     width: 100%;

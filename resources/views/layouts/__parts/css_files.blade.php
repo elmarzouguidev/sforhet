@@ -3,5 +3,5 @@
     href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/css/swiper-bundle.min.css') }}" />
-<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?ver={{ rand(10, 850) }}">
 <link rel="stylesheet" href="{{ asset('assets/css/responsive.css') }}">

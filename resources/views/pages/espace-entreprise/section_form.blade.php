@@ -1,115 +1,150 @@
-<section class="contact-area">
+<section class="hero-section-wrap hero-home2">
     <div class="custom-container">
-        <div class="custom-row">
-            <div class="contact-form-wrap">
-                <div class="contact-form-body">
-                    <h5 class="section-subtitle">Contact</h5>
-                    <h1 class="section-title">Lets get in touch</h1>
-                    <p>You can reach us anytime via <a href="email:contact@sforhet.ma">contact@sforhet.ma</a></p>
-                    <form action="" method="POST" class="contact-form">
-                        <div class="input-row">
-                            <div class="input-group">
-                                <label for="first_name">First Name</label>
-                                <input id="first_name" type="text" name="first_name" placeholder="First Name" />
-                            </div>
-                            <div class="input-group">
-                                <label for="last_name">Last Name</label>
-                                <input id="last_name" type="text" name="last_name" placeholder="Last Name" />
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <div class="input-group">
-                                <label for="email">E-mail</label>
-                                <input type="email" id="email" name="email" placeholder="Your Email" />
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <div class="input-group phone-number">
-                                <select class="number-prefix">
-                                    <option value="fr">FR</option>
-                                    <option value="us">US</option>
-                                </select>
-                                <label for="phone_number">Phone Number</label>
-                                <input id="phone_number" type="text" name="phone_number" placeholder="Your Number" />
-                            </div>
-                            <div class="input-group">
-                                <label for="country">Country</label>
-                                <input type="text" id="homeland" name="country" placeholder="Your Country" />
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <div class="input-group">
-                                <label for="message">Message</label>
-                                <textarea name="message" id="message" placeholder="Leave us a message...."></textarea>
-                            </div>
-                        </div>
-                        <div class="input-row">
-                            <div class="input-group input-checkbox">
-                                <input type="checkbox" id="privacy_policy_accept">
-                                <label for="privacy_policy_accept">You agree to our <a href="#">terms
-                                        and conditions.</a></label>
-                            </div>
-                        </div>
 
-                        <div class="input-row">
-                            <div class="input-group">
-                                <button id="submit" class="theme-btn">Get Started</button>
+        <div class="hero-contact-form-wrap">
+            <div class="hero-contact-form-inner-wrap">
+                <div class="mac-btns-wrap d-flex align-items-center justify-content-between">
+                    <div class="mac-buttons d-flex align-items-center">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="action-btn d-flex align-items-center">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="hero-contact-form">
+                    <form id="contactForm" action="{{ route('entreprise.store') }}" method="post" class="contact-form">
+                        @csrf
+                        @honeypot
+                        <div class="row">
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="nom">Nom</label>
+                                    <input type="text" id="nom" name="nom" placeholder="Entrer votre nom"
+                                        class="@error('nom') is-invalid @enderror" maxlength="100"
+                                        value="{{ old('nom') }}" required />
+                                    @error('nom')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                                <div class="input-group">
+                                    <label for="prenom">Prénom</label>
+                                    <input type="text" id="prenom" name="prenom"
+                                        placeholder="Entrer votre prénom" value="{{ old('prenom') }}" maxlength="100"
+                                        class="@error('prenom') is-invalid @enderror" required />
+                                    @error('prenom')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
-                        </div>
-                        <!-- Alert Message -->
-                        <div class="input-row">
-                            <div class="input-group alert-notification">
-                                <div id="alert-message" class="alert-msg"></div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="fonction">Fonction</label>
+                                    <input type="text" id="fonction" name="fonction" value="{{ old('fonction') }}"
+                                        placeholder="Fonction" class="@error('fonction') is-invalid @enderror"
+                                        required />
+                                    @error('fonction')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="raison_sociale">Raison sociale</label>
+                                    <input type="text" id="raison_sociale" name="raison_sociale"
+                                        value="{{ old('raison_sociale') }}" placeholder="Raison sociale"
+                                        class="@error('raison_sociale') is-invalid @enderror" required />
+                                    @error('raison_sociale')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="ville">Ville</label>
+                                    <input type="text" id="ville" name="ville" value="{{ old('ville') }}"
+                                        class="@error('ville') is-invalid @enderror" placeholder="Ville" required />
+                                    @error('ville')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group phone-number">
+                                    <select class="number-prefix">
+                                        <option value="uk">MA</option>
+                                    </select>
+                                    <label for="phone">Téléphone</label>
+                                    <input type="text" id="phone" name="phone" placeholder="Téléphone"
+                                        required />
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="email">Adresse mail</label>
+                                    <input type="email" id="email" name="email" value="{{ old('email') }}"
+                                        class="@error('email') is-invalid @enderror" placeholder="Adresse mail"
+                                        required />
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="demande">Détail de la demande</label>
+                                    <textarea name="demande" id="demande" rows="2" placeholder="" class="@error('demande') is-invalid @enderror"
+                                        required>{{ old('demande') }}</textarea>
+                                    @error('demande')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            {{-- <div class="input-row">
+                                <div class="input-group input-checkbox">
+                                    <input type="checkbox" id="privacy_policy_accept" name="privacy_policy_accept">
+                                    <label for="privacy_policy_accept">You agree to our <a href="#">terms and
+                                            conditions.</a></label>
+                                </div>
+                            </div> --}}
+
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <button type="submit" id="submit" class="theme-btn">
+
+                                        Envoyer
+                                    </button>
+                                </div>
+                            </div>
+                            <!-- Alert Message -->
+                            <div class="input-row">
+                                <div class="input-group alert-notification">
+                                    <div id="alert-message" class="alert-msg"></div>
+                                </div>
                             </div>
                         </div>
                     </form>
                 </div>
-            </div>
-            <div class="contact-infos">
-                <div class="contact-infos-inner">
-                    <div class="contact-info">
-                        <img src="{{ asset('assets/imgs/support-icon.svg') }}" alt="Support" />
-                        <h3>Contact Info</h3>
-                        <p>
-                            +212522236574 <br>
-                            contact@sforhet.ma
-                        </p>
-                    </div>
-                    <div class="contact-office-info contact-info">
-                        <img src="{{ asset('assets/imgs/map-icon.svg') }}" alt="Map" />
-                        <h3>Visit our office</h3>
-                        <p>16/9, Down Street
-                            Edinburgh, Scotland
-                            United Kingdom</p>
-                    </div>
 
-                    <ul class="contact-social-links">
-                        <li>
-                            <a href="#">
-                                <?xml version="1.0" encoding="UTF-8"?><i class="iconoir-dribbble"></i>
-                                Dribbble
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <?xml version="1.0" encoding="UTF-8"?><i class="iconoir-twitter"></i>
-                                Twitter
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <?xml version="1.0" encoding="UTF-8"?><i class="iconoir-instagram"></i>
-                                Instagram
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <?xml version="1.0" encoding="UTF-8"?><i class="iconoir-linkedin"></i>
-                                linkedin
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
     </div>

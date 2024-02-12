@@ -17,157 +17,141 @@
                     </div>
                 </div>
 
-                <div class="hero-contact-form-header d-flex align-items-center justify-content-between">
-                    <p>You can reach us anytime via <a href="mailto:contact@sforhet.ma">contact@sforhet.ma</a></p>
-
-                    <a href="" class="our-expert-team-box d-flex align-items-center">
-                        <div class="our-expert-team-box-inner d-flex align-items-center">
-                            <div class="imgs d-flex align-items-center">
-                                <img src="./assets/imgs/small-img-4.png" alt="team" />
-                                <img src="./assets/imgs/small-img-3.png" alt="team" />
-                                <img src="./assets/imgs/small-img-2.png" alt="team" />
-                                <img src="./assets/imgs/small-img-1.png" alt="team" />
-                            </div>
-                            <p>
-                                Meet
-                                <span>Our Experts</span>
-                            </p>
-                        </div>
-                    </a>
-                </div>
-
                 <div class="hero-contact-form">
-                    <form action="assets/mail/contact2.php" method="POST" class="contact-form d-flex">
+                    <form id="contactForm" action="{{ route('candidats.store') }}" method="post" class="contact-form">
                         @csrf
                         @honeypot
-                        <div class="input-main-row">
+                        <div class="row">
                             <div class="input-row">
                                 <div class="input-group">
-                                    <label for="first_name">First Name</label>
-                                    <input type="text" placeholder="First Name" id="first_name" name="first_name" />
+                                    <label for="nom">Nom</label>
+                                    <input type="text" id="nom" name="nom" placeholder="Entrer votre nom"
+                                        class="@error('nom') is-invalid @enderror" maxlength="100"
+                                        value="{{ old('nom') }}" required />
+                                    @error('nom')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                                 <div class="input-group">
-                                    <label for="last_name">Last Name</label>
-                                    <input type="text" placeholder="Last Name" id="last_name" name="last_name" />
+                                    <label for="prenom">Prénom</label>
+                                    <input type="text" id="prenom" name="prenom"
+                                        placeholder="Entrer votre prénom" value="{{ old('prenom') }}" maxlength="100"
+                                        class="@error('prenom') is-invalid @enderror" required />
+                                    @error('prenom')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="input-row col-lg-6"">
+
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="date_nissance">Date de naissance</label>
+                                    <input type="date" id="date_nissance" name="date_nissance"
+                                        placeholder="Date de naissance" value="{{ old('date_nissance') }}"
+                                        class="@error('date_nissance') is-invalid @enderror" required />
+                                    @error('date_nissance')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="input-row">
                                 <div class="input-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" placeholder="Your Email" id="email" name="email" />
+                                    <label for="adresse">Adresse</label>
+                                    <textarea name="adresse" id="adresse" rows="2" placeholder="" class="@error('adresse') is-invalid @enderror"
+                                        required>{{ old('adresse') }}</textarea>
+                                    @error('adresse')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="input-row">
+                                <div class="input-group">
+                                    <label for="quartier">Quartier</label>
+                                    <input type="text" id="quartier" name="quartier" value="{{ old('quartier') }}"
+                                        placeholder="Quartier" class="@error('quartier') is-invalid @enderror"
+                                        required />
+                                    @error('quartier')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="ville">Ville</label>
+                                    <input type="text" id="ville" name="ville" value="{{ old('ville') }}"
+                                        class="@error('ville') is-invalid @enderror" placeholder="Ville" required />
+                                    @error('ville')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="diplome">Diplôme</label>
+                                    <input type="text" id="diplome" name="diplome" value="{{ old('diplome') }}"
+                                        class="@error('diplome') is-invalid @enderror" placeholder="Diplôme" required />
+                                    @error('diplome')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            <div class="input-row">
+                                <div class="input-group">
+                                    <label for="filiere">Filière</label>
+                                    <input type="text" id="filiere" name="filiere" value="{{ old('filiere') }}"
+                                        class="@error('filiere') is-invalid @enderror" placeholder="Filière" required />
+                                    @error('filiere')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+                            </div>
+                            {{-- <div class="input-row">
                                 <div class="input-group phone-number">
                                     <select class="number-prefix">
-                                        <option value="uk">UK</option>
-                                        <option value="us">US</option>
+                                        <option value="uk">MA</option>
                                     </select>
                                     <label for="phone_number">Phone Number</label>
-                                    <input type="text" name="phone_number" placeholder="Your Number" />
+                                    <input type="text" id="phone_number" name="phone" placeholder="Your Number"
+                                        required />
                                 </div>
                                 <div class="input-group">
                                     <label for="country">Country</label>
-                                    <input type="text" name="country" placeholder="Your Country" />
+                                    <input type="text" id="homeland" name="country" placeholder="Your Country" />
                                 </div>
                             </div>
-                            <div class="input-row">
-                                <div class="input-group">
-                                    <label>What's the type of your company?</label>
-                                    <div class="choice-a-company flex-wrap d-flex">
-                                        <div class="radio-box">
-                                            <input type="radio" id="saas" name="choice_company" value="SAAS" />
-                                            <label for="saas">SAAS</label>
-                                        </div>
-                                        <div class="radio-box">
-                                            <input type="radio" id="banking" name="choice_company"
-                                                value="Banking" />
-                                            <label for="banking">Banking</label>
-                                        </div>
-                                        <div class="radio-box">
-                                            <input type="radio" id="agency" name="choice_company" value="Agency" />
-                                            <label for="agency">Agency</label>
-                                        </div>
-                                        <div class="radio-box">
-                                            <input type="radio" id="business" name="choice_company"
-                                                value="Business" />
-                                            <label for="business">Business</label>
-                                        </div>
-                                        <div class="radio-box">
-                                            <input type="radio" id="other" name="choice_company" value="Other" />
-                                            <label for="other">Other</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="input-row">
-                                <div class="input-group">
-                                    <label>What you need from us?</label>
-                                    <div class="feedback-checkboxes d-flex flex-wrap">
-                                        <div class="feedback-item">
-                                            <input type="checkbox" id="app_design" name="services[]"
-                                                value="App design" />
-                                            <label for="app_design">App design</label>
-                                        </div>
-                                        <div class="feedback-item">
-                                            <input type="checkbox" id="web_design" name="services[]"
-                                                value="Web design" />
-                                            <label for="web_design">Web design</label>
-                                        </div>
-                                        <div class="feedback-item">
-                                            <input type="checkbox" id="branding" name="services[]"
-                                                value="Branding" />
-                                            <label for="branding">Branding</label>
-                                        </div>
-                                        <div class="feedback-item">
-                                            <input type="checkbox" id="development" name="services[]"
-                                                value="Development" />
-                                            <label for="development">Development</label>
-                                        </div>
-                                        <div class="feedback-item">
-                                            <input type="checkbox" id="cloud_service" name="services[]"
-                                                value="Cloud service" />
-                                            <label for="cloud_service">Cloud service</label>
-                                        </div>
-                                        <div class="feedback-item">
-                                            <input type="checkbox" id="other" name="services[]"
-                                                value="Other" />
-                                            <label for="other">Other</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="input-main-row">
-                            <div class="input-row">
-                                <div class="input-group">
-                                    <label for="message">Message</label>
-                                    <textarea name="message" id="message" placeholder="Leave us a message...."></textarea>
-                                </div>
-                            </div>
-                            <div class="input-row">
-                                <div class="input-group">
-                                    <label for="budget">Budget</label>
-                                    <input id="pi_input" type="range" min="0" max="200"
-                                        step="1" style="padding: 0;" name="budget" />
-                                    <div
-                                        class="budget-values d-flex align-items-center justify-content-between w-full">
-                                        <div class="left-value">$<span id="budget-value">300</span>k</div>
-                                        <div class="right-value">$200k</div>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="input-row">
                                 <div class="input-group input-checkbox">
-                                    <input type="checkbox" id="privacy_policy_accept" name="privacy_policy_accept"
-                                        value="1">
-                                    <label for="privacy_policy_accept">Click the box and agree to our <a
-                                            href="#">terms and conditions.</a></a></label>
+                                    <input type="checkbox" id="privacy_policy_accept" name="privacy_policy_accept">
+                                    <label for="privacy_policy_accept">You agree to our <a href="#">terms and
+                                            conditions.</a></label>
                                 </div>
-                            </div>
+                            </div> --}}
+
                             <div class="input-row">
                                 <div class="input-group">
-                                    <button class="theme-btn" id="submit">Get Started</button>
+                                    <button type="submit" id="submit" class="theme-btn">
+
+                                        Envoyer
+                                    </button>
                                 </div>
                             </div>
                             <!-- Alert Message -->

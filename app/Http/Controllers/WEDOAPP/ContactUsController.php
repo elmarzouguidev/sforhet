@@ -25,7 +25,11 @@ class ContactUsController extends Controller
         Mail::to('abdelgha4or@gmail.com')->send(new ContactUsEmail($data));
         //Mail::to('abdelgha4or@gmail.com')->queue(new ContactUsEmail($data));
         //Mail::to('abdelgha4or@gmail.com')->later(now()->addMinutes(2), new ContactUsEmail($data));
+        if (empty(Mail::flushMacros())) {
 
-        return redirect(route('contact.us'))->with('success', 'Votre E-mail a été envoyer avec success');
+            return redirect()->back()->with('success', 'Votre E-mail a été envoyer avec success');
+        } else {
+            return redirect()->back()->with('error', 'Erreur !! merci de ressayer');
+        }
     }
 }

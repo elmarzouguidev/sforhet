@@ -28,8 +28,8 @@ class ContactUsEmail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('noreplay@sforhet.ma', 'Mail depuis le siteweb'),
-            subject: 'sforhet website',
+            from: new Address('noreplay@sforhet.ma', 'SFORHET SITE WEB'),
+            subject: 'SFORHET SITE WEB CONTACT',
         );
     }
 

@@ -27,7 +27,7 @@ class EntrepriseMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('noreplay@sforhet.ma', 'Mail depuis espace entreprise'),
+            from: new Address('noreplay@sforhet.ma', 'SFORHET ESPACE ENTREPRISE'),
             subject: $this->data['raison_sociale'],
         );
     }

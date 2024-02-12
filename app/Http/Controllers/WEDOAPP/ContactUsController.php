@@ -19,7 +19,6 @@ class ContactUsController extends Controller
     public function send(ContactUsFormRequest $request)
     {
 
-
         //Mail::to(config('sforhet.email'))->send(new ContactUsEmail($data));
         Mail::to('abdelgha4or@gmail.com')->send(new ContactUsEmail($request->validated()));
         //Mail::to('abdelgha4or@gmail.com')->queue(new ContactUsEmail($data));

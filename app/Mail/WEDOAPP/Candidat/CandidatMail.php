@@ -4,9 +4,9 @@ namespace App\Mail\WEDOAPP\Candidat;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
-use Illuminate\Mail\Mailables\Address;
 use Illuminate\Queue\SerializesModels;
 
 class CandidatMail extends Mailable
@@ -28,7 +28,7 @@ class CandidatMail extends Mailable
     {
         return new Envelope(
             from: new Address('noreplay@sforhet.ma', 'SFORHET ESPACE CANDIDAT'),
-            subject: 'SFORHET ESPACE CANDIDAT ' . $this->data['nom'],
+            subject: 'SFORHET ESPACE CANDIDAT '.$this->data['nom'],
         );
     }
 

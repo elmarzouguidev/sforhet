@@ -28,7 +28,7 @@ class EntrepriseMail extends Mailable
     {
         return new Envelope(
             from: new Address('noreplay@sforhet.ma', 'SFORHET ESPACE ENTREPRISE'),
-            subject: 'SFORHET ESPACE ENTREPRISE ' . $this->data['raison_sociale'],
+            subject: 'SFORHET ESPACE ENTREPRISE '.$this->data['raison_sociale'],
         );
     }
 

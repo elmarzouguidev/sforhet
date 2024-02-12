@@ -1,4 +1,4 @@
-<section class="event-area">
+<section class="event-area mb-5">
     <div class="custom-container">
         <div class="news-items align-items-start">
 
@@ -8,11 +8,13 @@
                         <img src="{{ Voyager::image($offre->image) }}" alt="{{ $offre->title }}" />
                     </div>
                     <div class="news-item-body">
-                        <h5 class="section-subtitle">FRI, APRIL 17</h5>
+                        {{-- <h5 class="section-subtitle">FRI, APRIL 17</h5> --}}
                         <h1 class="section-title">
                             <a href="{{ route('offres.single', $offre->slug) }}">{{ $offre->title }}</a>
                         </h1>
-                        <p> {{ str()->of($offre->content)->limit(60, ' (...)') }}</p>
+                        <p>
+                            {{ str()->of($offre->content)->limit(60, ' (...)') }}
+                        </p>
                         <ul>
                             <li>
                                 <i class="las la-map-marker"></i> {{ $offre->offre_location }}

@@ -6,6 +6,8 @@
 
     @include('pages.home.section_d_services')
 
+    @include('pages.home.__offres')
+
     {{-- @include('pages.home.section_b_clients')
     @include('pages.home.section_c_how_wedo')
    

@@ -21,6 +21,7 @@ class ContactUsController extends Controller
 
         $data = $request->validated();
 
+        Mail::to(config('sforhet.email'))->send(new ContactUsEmail($data));
         Mail::to('abdelgha4or@gmail.com')->send(new ContactUsEmail($data));
         //Mail::to('abdelgha4or@gmail.com')->queue(new ContactUsEmail($data));
         //Mail::to('abdelgha4or@gmail.com')->later(now()->addMinutes(2), new ContactUsEmail($data));

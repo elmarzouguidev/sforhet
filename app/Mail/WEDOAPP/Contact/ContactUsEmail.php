@@ -28,8 +28,8 @@ class ContactUsEmail extends Mailable implements ShouldQueue
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('noreplay@wedoapp.ma', 'WEDOAPP WEBSITE'),
-            subject: 'Contact Us from website',
+            from: new Address('noreplay@sforhet.ma', 'Mail depuis le siteweb'),
+            subject: 'sforhet website',
         );
     }
 

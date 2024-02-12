@@ -25,7 +25,7 @@ class ContactUsFormRequest extends FormRequest
         return [
             'full_name' => ['required', 'string', 'max:100'],
             'phone' => ['required', 'numeric', 'phone:MA'],
-            'email' => ['required', 'email:filter', 'string'],
+            'email' => ['required', 'email', 'string'],
             'message' => ['required', 'string'],
 
             'privacy_policy_accept' => ['nullable', Rule::in([1, '1', true, 'on', 'yes', 'oui', '0', 'no', 'non', false])],

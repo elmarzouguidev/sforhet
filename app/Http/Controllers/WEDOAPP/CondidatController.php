@@ -52,7 +52,7 @@ class CondidatController extends Controller
 
     public function storeEntreprise(EntrepriseFormRequest $request)
     {
-        Mail::to(config('sforhet.email'))->send(new EntrepriseMail($request->validated()));
+        Mail::to(config('sforhet.email_entreprise'))->send(new EntrepriseMail($request->validated()));
 
         if (empty(Mail::flushMacros())) {
 

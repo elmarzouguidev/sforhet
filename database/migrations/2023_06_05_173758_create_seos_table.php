@@ -16,7 +16,7 @@ return new class extends Migration
             $table->uuid();
 
             $table->morphs('seoable');
-            
+
             $table->string('meta_title')->nullable();
             $table->string('meta_url')->nullable();
             $table->longText('meta_description')->nullable();

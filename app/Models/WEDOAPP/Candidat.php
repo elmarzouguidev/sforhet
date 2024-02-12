@@ -11,10 +11,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Candidat extends Model
 {
+    use GetModelByKeyName;
     use HasFactory;
     use UuidGenerator;
-    use GetModelByKeyName;
-
 
     /**
      * @var string[]|array<int,string>

@@ -5,5 +5,5 @@
 
     @include('pages.offres.single.section_b_details')
 
-    @include('pages.offres.single.section_c_call_action')
+    @include('pages.offres.single.apply_form')
 @endsection

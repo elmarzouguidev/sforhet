@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('candidats', function (Blueprint $table) {
             $table->id();
             $table->uuid()->nullable();
-            
+
             $table->string('nom', 40);
             $table->string('prenom', 40);
             $table->string('telephone', 40)->nullable();

@@ -12,18 +12,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Offre extends Model
 {
-    use HasFactory;
-    use UuidGenerator;
     use GetModelByKeyName;
+    use HasFactory;
     use HasSlug;
-
+    use UuidGenerator;
 
     /**
      * @var string[]|array<int,string>
      */
     protected $fillable = [
         'uuid',
-
 
         'is_active',
     ];
@@ -33,7 +31,7 @@ class Offre extends Model
      */
     protected $casts = [
         'is_active' => 'boolean',
-        'offre_date' => 'date'
+        'offre_date' => 'date',
     ];
 
     protected $slugName = 'title';

@@ -11,7 +11,6 @@ trait HasSlug
 {
     use SpatieSlug;
 
-
     public function getSlugName(): string
     {
         return property_exists($this, 'slugName') ? $this->slugName : 'name';

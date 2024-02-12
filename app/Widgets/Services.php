@@ -3,7 +3,6 @@
 namespace App\Widgets;
 
 use App\Models\WEDOAPP\Service;
-
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 use TCG\Voyager\Facades\Voyager;
@@ -28,11 +27,11 @@ class Services extends BaseDimmer
         $string = 'Services';
 
         return view('voyager::dimmer', array_merge($this->config, [
-            'icon'   => 'voyager-bag',
-            'title'  => "{$count} {$string}",
-            'text'   => __('Services', ['count' => $count, 'string' => Str::lower($string)]),
+            'icon' => 'voyager-bag',
+            'title' => "{$count} {$string}",
+            'text' => __('Services', ['count' => $count, 'string' => Str::lower($string)]),
             'button' => [
-                'text' =>'Services',
+                'text' => 'Services',
                 'link' => route('voyager.services.index'),
             ],
             'image' => asset('assets/products.jpg'),

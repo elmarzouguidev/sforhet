@@ -3,7 +3,6 @@
 namespace App\Http\Requests\WEDOAPP\Candidat;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\Date;
 
 class CandidatFormRequest extends FormRequest
 {
@@ -31,7 +30,8 @@ class CandidatFormRequest extends FormRequest
             'ville' => ['required', 'string', 'max:100'],
             'diplome' => ['required', 'string', 'max:100'],
             'filiere' => ['required', 'string', 'max:100'],
-            'date_nissance' => ['required', 'date', 'before:17 years ago'],
+            'date_nissance' => ['required', 'date', 'date_format:d/m/Y'],
+            'offre' => ['sometimes', 'nullable', 'uuid', 'exists:offres,uuid'],
         ];
     }
 }

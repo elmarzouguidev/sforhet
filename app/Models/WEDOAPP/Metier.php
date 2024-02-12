@@ -11,18 +11,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Metier extends Model
 {
+    use GetModelByKeyName;
     use HasFactory;
     use UuidGenerator;
-    use GetModelByKeyName;
-    
 
     /**
      * @var string[]|array<int,string>
      */
     protected $fillable = [
         'uuid',
-        
-        
+
         'is_active',
     ];
 

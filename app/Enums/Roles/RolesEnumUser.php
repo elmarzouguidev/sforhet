@@ -4,7 +4,7 @@ namespace App\Enums\Roles;
 
 enum RolesEnumUser: string
 {
-        // case NAMEINAPP = 'name-in-database';
+    // case NAMEINAPP = 'name-in-database';
 
     case SUPER_USER = 'SuperUser';
 
@@ -12,7 +12,7 @@ enum RolesEnumUser: string
     public function label(): string
     {
         return match ($this) {
-            static::SUPER_USER => 'Super User',
+            self::SUPER_USER => 'Super User',
         };
     }
 

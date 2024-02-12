@@ -12,10 +12,9 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 
 class Seo extends Model
 {
+    use GetModelByKeyName;
     use HasFactory;
     use UuidGenerator;
-    use GetModelByKeyName;
-    
 
     protected $fillable = [
         'meta_title',
@@ -40,7 +39,7 @@ class Seo extends Model
         'twitter_description',
         'twitter_image',
 
-        'is_default'
+        'is_default',
     ];
 
     public function seoable(): MorphTo

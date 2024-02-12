@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
             $table->uuid()->nullable();
-            $table->string('title',200);
+            $table->string('title', 200);
             $table->mediumText('content')->nullable();
             $table->string('image')->nullable();
 

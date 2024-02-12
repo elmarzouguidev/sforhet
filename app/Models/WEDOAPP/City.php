@@ -12,11 +12,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class City extends Model
 {
-    use HasFactory;
-    use UuidGenerator;
     use GetModelByKeyName;
+    use HasFactory;
     use HasSlug;
-
+    use UuidGenerator;
 
     /**
      * @var string[]|array<int,string>
@@ -25,7 +24,6 @@ class City extends Model
         'uuid',
         'name',
         'slug',
-
 
         'is_active',
     ];

@@ -4,7 +4,6 @@ namespace App\Http\Controllers\WEDOAPP;
 
 use App\Http\Controllers\Controller;
 use App\Models\WEDOAPP\Partner;
-use Illuminate\Http\Request;
 use TCG\Voyager\Models\Page;
 
 class CabinetController extends Controller
@@ -20,6 +19,4 @@ class CabinetController extends Controller
 
         return view('pages.cabinet.index', compact('pageAbout', 'pageHistoir', 'pageFoundateur', 'pagePartner', 'partners'));
     }
-
-    
 }

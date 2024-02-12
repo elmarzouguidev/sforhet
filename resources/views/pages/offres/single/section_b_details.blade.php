@@ -17,7 +17,7 @@
                     </li>
                 </ul>
 
-                <a href="#" class="theme-btn">Postuler</a>
+                <a href="#applyform" class="theme-btn">Postuler</a>
             </div>
         </div>
     </div>

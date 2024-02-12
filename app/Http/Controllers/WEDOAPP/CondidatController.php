@@ -8,25 +8,23 @@ use App\Http\Requests\WEDOAPP\Entreprise\EntrepriseFormRequest;
 use App\Mail\WEDOAPP\Entreprise\EntrepriseMail;
 use App\Models\WEDOAPP\Candidat;
 use App\Models\WEDOAPP\City;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Date;
 use Illuminate\Support\Facades\Mail;
 use TCG\Voyager\Models\Page;
 
 class CondidatController extends Controller
 {
-
-
     public function index()
     {
 
         $pageCandidat = Page::whereSlug('espace-candidats')->where('status', 'active')->first();
+
         return view('pages.candidats.index', compact('pageCandidat'));
     }
 
     public function entreprise()
     {
         $pageEntreprise = Page::whereSlug('espace-entreprise')->where('status', 'active')->first();
+
         return view('pages.espace-entreprise.index', compact('pageEntreprise'));
     }
 
@@ -48,7 +46,7 @@ class CondidatController extends Controller
         $candidat->city()->associate($newCity);
         $candidat->save();
 
-        return  redirect(route('candidats'))->with('success', 'Votre Demande  été envoyer avec success');
+        return redirect(route('candidats'))->with('success', 'Votre Demande  été envoyer avec success');
     }
 
     public function storeEntreprise(EntrepriseFormRequest $request)
@@ -57,9 +55,9 @@ class CondidatController extends Controller
 
         if (empty(Mail::flushMacros())) {
 
-            return redirect()->back()->with('success', "Merci votre demande a été envoyer avec succès");
+            return redirect()->back()->with('success', 'Merci votre demande a été envoyer avec succès');
         } else {
-            return redirect()->back()->with('error', "Erreur !! merci de ressayer");
+            return redirect()->back()->with('error', 'Erreur !! merci de ressayer');
         }
     }
 }

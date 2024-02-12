@@ -11,17 +11,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class Service extends Model
 {
-    use HasFactory;
-    use UuidGenerator;
     use GetModelByKeyName;
+    use HasFactory;
     use HasSlug;
     use Seoable;
+    use UuidGenerator;
+
     /**
      * @var string[]|array<int,string>
      */
     protected $fillable = [
         'uuid',
-
 
         'is_active',
     ];
@@ -32,7 +32,6 @@ class Service extends Model
     protected $casts = [
         'is_active' => 'boolean',
     ];
-
 
     // Relationships
 

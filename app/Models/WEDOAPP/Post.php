@@ -15,21 +15,18 @@ use Spatie\Translatable\HasTranslations;
 
 class Post extends Model
 {
-    use HasFactory;
-    use UuidGenerator;
     use GetModelByKeyName;
+    use HasFactory;
     use HasSlug;
-    use Seoable;
-
     use HasTranslations;
-
+    use Seoable;
+    use UuidGenerator;
 
     /**
      * @var string[]|array<int,string>
      */
     protected $fillable = [
         'uuid',
-
 
         'is_active',
     ];

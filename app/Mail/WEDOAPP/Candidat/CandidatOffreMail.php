@@ -4,20 +4,21 @@ namespace App\Mail\WEDOAPP\Candidat;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class CandidatMail extends Mailable
+class CandidatOffreMail extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(public $data)
     {
-        //
+        // dd($this->data);
     }
 
     /**
@@ -26,7 +27,8 @@ class CandidatMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Candidat Mail',
+            from: new Address('noreplay@sforhet.ma', 'Postuler pour un offre'),
+            subject: $this->data['nom'],
         );
     }
 
@@ -36,7 +38,7 @@ class CandidatMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.offre.mail',
         );
     }
 

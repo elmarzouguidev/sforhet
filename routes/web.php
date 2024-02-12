@@ -21,7 +21,6 @@ use App\Http\Controllers\WEDOAPP\SolutionController;
 use App\Http\Controllers\WEDOAPP\TeamController;
 use Illuminate\Support\Facades\Route;
 
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -42,7 +41,6 @@ Route::group(['middleware' => 'web', 'compress_html'], function () {
     Route::get('/contact-us', [ContactUsController::class, 'index'])->name('contact.us');
 
     Route::post('/contact-us', [ContactUsController::class, 'send'])->middleware('check_spam')->name('contact.us.post');
-
 
     Route::group(['prefix' => 'company'], function () {
         Route::get('/', [CompanyController::class, 'index'])->name('company');
@@ -70,7 +68,10 @@ Route::group(['middleware' => 'web', 'compress_html'], function () {
     Route::get('/services/{service:slug}', [ServiceController::class, 'single'])->name('services.single');
 
     Route::get('/nos-offres', [OffreController::class, 'index'])->name('offres');
+
     Route::get('/nos-offres/{offre:slug}', [OffreController::class, 'single'])->name('offres.single');
+    Route::post('/nos-offres/{offre:slug}', [OffreController::class, 'apply'])->name('offres.single.post');
+
     Route::get('/cabinet', [CabinetController::class, 'index'])->name('cabinet');
 
     Route::get('/espace-candidats', [CondidatController::class, 'index'])->name('candidats');
@@ -78,13 +79,12 @@ Route::group(['middleware' => 'web', 'compress_html'], function () {
 
     Route::get('/espace-entreprise', [CondidatController::class, 'entreprise'])->name('entreprise');
     Route::post('/espace-entreprise', [CondidatController::class, 'storeEntreprise'])->name('entreprise.store');
-    
+
     Route::get('/faqs', [FaqController::class, 'index'])->name('faqs');
 
     Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolios');
     Route::get('/portfolio/{prpject}', [PortfolioController::class, 'single'])->name('portfolios.single');
 });
-
 
 Route::group(['prefix' => 'theadmin'], function () {
     Voyager::routes();

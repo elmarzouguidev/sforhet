@@ -33,7 +33,7 @@
                         <div class="input-row">
                             <div class="input-group">
                                 <label for="full_name">Nom complet</label>
-                                <input type="text" id="full_name" name="full_name" placeholder="First Name"
+                                <input type="text" id="full_name" name="full_name" placeholder="Nom complet"
                                     class="@error('full_name') is-invalid @enderror" maxlength="100" required />
                                 @error('full_name')
                                     <span class="invalid-feedback" role="alert">
@@ -45,7 +45,7 @@
                         <div class="input-row">
                             <div class="input-group">
                                 <label for="email">E-mail</label>
-                                <input type="email" id="email" name="email" placeholder="Email"
+                                <input type="email" id="email" name="email" placeholder="E-mail"
                                     class="@error('email') is-invalid @enderror" required />
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -72,8 +72,7 @@
                         <div class="input-row">
                             <div class="input-group">
                                 <label for="message">Message</label>
-                                <textarea name="message" id="message" placeholder="Leave us a message...."
-                                    class="@error('message') is-invalid @enderror" required></textarea>
+                                <textarea name="message" id="message" placeholder="Message" class="@error('message') is-invalid @enderror" required></textarea>
                                 @error('message')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

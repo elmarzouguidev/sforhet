@@ -8,16 +8,10 @@ use App\Http\Controllers\WEDOAPP\CondidatController;
 use App\Http\Controllers\WEDOAPP\ContactUsController;
 use App\Http\Controllers\WEDOAPP\EventController;
 use App\Http\Controllers\WEDOAPP\FaqController;
-use App\Http\Controllers\WEDOAPP\FeatureController;
 use App\Http\Controllers\WEDOAPP\HomeController;
 use App\Http\Controllers\WEDOAPP\OffreController;
-use App\Http\Controllers\WEDOAPP\OverviewController;
 use App\Http\Controllers\WEDOAPP\PartnerController;
-use App\Http\Controllers\WEDOAPP\PortfolioController;
-use App\Http\Controllers\WEDOAPP\PricingController;
-use App\Http\Controllers\WEDOAPP\ReleaseController;
 use App\Http\Controllers\WEDOAPP\ServiceController;
-use App\Http\Controllers\WEDOAPP\SolutionController;
 use App\Http\Controllers\WEDOAPP\TeamController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,34 +50,23 @@ Route::group(['middleware' => 'web', 'compress_html'], function () {
     Route::get('/blog', [BlogController::class, 'index'])->name('blog');
     Route::get('/blog/{post}', [BlogController::class, 'single'])->name('blog.single');
 
-    /*** */
-
-    Route::get('/overview', [OverviewController::class, 'index'])->name('overview');
-    Route::get('/pricing', [PricingController::class, 'index'])->name('pricing');
-    Route::get('/feature', [FeatureController::class, 'index'])->name('feature');
-    Route::get('/release', [ReleaseController::class, 'index'])->name('release');
-    Route::get('/solution', [SolutionController::class, 'index'])->name('solution');
-
     Route::get('/services', [ServiceController::class, 'index'])->name('services');
     Route::get('/services/{service:slug}', [ServiceController::class, 'single'])->name('services.single');
 
     Route::get('/nos-offres', [OffreController::class, 'index'])->name('offres');
 
     Route::get('/nos-offres/{offre:slug}', [OffreController::class, 'single'])->name('offres.single');
-    Route::post('/nos-offres/{offre:slug}', [OffreController::class, 'apply'])->name('offres.single.post');
+    Route::post('/nos-offres/{offre:slug}', [OffreController::class, 'apply'])->middleware('check_spam')->name('offres.single.post');
 
     Route::get('/cabinet', [CabinetController::class, 'index'])->name('cabinet');
 
     Route::get('/espace-candidats', [CondidatController::class, 'index'])->name('candidats');
-    Route::post('/espace-candidats', [CondidatController::class, 'storeCandidat'])->name('candidats.store');
+    Route::post('/espace-candidats', [CondidatController::class, 'storeCandidat'])->middleware('check_spam')->name('candidats.store');
 
     Route::get('/espace-entreprise', [CondidatController::class, 'entreprise'])->name('entreprise');
-    Route::post('/espace-entreprise', [CondidatController::class, 'storeEntreprise'])->name('entreprise.store');
+    Route::post('/espace-entreprise', [CondidatController::class, 'storeEntreprise'])->middleware('check_spam')->name('entreprise.store');
 
     Route::get('/faqs', [FaqController::class, 'index'])->name('faqs');
-
-    Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolios');
-    Route::get('/portfolio/{prpject}', [PortfolioController::class, 'single'])->name('portfolios.single');
 });
 
 Route::group(['prefix' => 'theadmin'], function () {

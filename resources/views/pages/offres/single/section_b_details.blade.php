@@ -2,7 +2,7 @@
     <div class="custom-container">
         <div class="custom-row align-items-center">
             <div class="img-box">
-                <img src="{{ asset('assets/imgs/event-details.jpg') }}" alt="Event Details" />
+                <img src="{{ Voyager::image($offre->image) }}" alt="{{ $offre->title }}" />
             </div>
             <div class="content-box">
 

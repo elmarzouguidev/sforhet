@@ -5,7 +5,7 @@
             <div class="header-left d-flex align-items-center">
                 <a href="{{ route('home') }}" class="logo">
                     {{-- <img src="{{ asset('assets/imgs/logo.svg') }}" alt="SFORHET logo" /> --}}
-                    <x-application-logo alt="SFORHET logo" />
+                    <x-application-logo alt="SFORHET" />
                 </a>
 
                 <div class="header-left-right">
@@ -69,11 +69,11 @@
             <div class="header-right">
                 <div class="header-contact-info d-flex align-items-center">
                     <div class="phone-number">
-                        <a href="tel:+212522236574">
+                        <a href="tel:{{ setting('contact.telephone') }}">
                             Appelez-nous
                             <i class="iconoir-arrow-up-right"></i>
                         </a>
-                        +212522236574
+                        {{ setting('contact.telephone') }}
                     </div>
                     <a href="{{ route('contact.us') }}" class="theme-btn">Contact</a>
                 </div>

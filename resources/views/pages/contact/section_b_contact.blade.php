@@ -9,17 +9,15 @@
                         <div class="map-location-item-inner">
                             <img src="{{ asset('assets/imgs/flag.png') }}" alt="Flag" />
                             <div class="content">
-                                <h3>New York, USA</h3>
-                                <p>720/5, Starc Street,
-                                    North View, New York</p>
+                                <p>{{ setting('contact.address') }}</p>
                             </div>
                         </div>
                         <span class="circle"></span>
                     </div>
                     {{-- <img src="{{ asset('assets/imgs/map.svg') }}" alt="Map" /> --}}
-                    <div>
-                        {!! setting('contact.map') !!}
-                    </div>
+
+                    {!! setting('contact.map') !!}
+
                 </div>
             </div>
             <div class="contact-inner-info-box d-flex align-items-center">

@@ -27,8 +27,8 @@ class CandidatOffreMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            from: new Address('noreplay@sforhet.ma', 'Postuler pour un offre'),
-            subject: $this->data['nom'],
+            from: new Address('noreplay@sforhet.ma', 'SFORHET OFFRE POSTULE'),
+            subject: 'SFORHET OFFRE POSTULE ' . $this->data['nom'],
         );
     }
 

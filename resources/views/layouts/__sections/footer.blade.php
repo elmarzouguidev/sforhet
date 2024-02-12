@@ -6,15 +6,18 @@
                 <div class="left-content">
                     <a href="{{ route('home') }}" class="logo">
                         {{-- <img src="{{ asset('assets/imgs/logo-white.svg')}}" alt="Logo" /> --}}
-                        {{-- <x-application-logo width="100" alt="wedoapp logo" /> --}}
+                        <x-application-logo width="100" alt="SFORHET logo" />
                     </a>
-                    <p>We provide the expertise and support to <br>
-                        propel your business forward.</p>
+                    <p>
+                        We provide the expertise and support to
+                        <br>
+                        propel your business forward.
+                    </p>
                     <form action="" method="post" class="subscribe-form">
                         @csrf
                         @honeypot
                         <div class="subscribe-box d-flex">
-                            <input type="email" id="email" name="email" placeholder="Enter Your Email" />
+                            <input type="email" id="email" name="email" placeholder="Entrer votre email" />
                             <button id="submit2" class="theme-btn">Get Started</button>
                         </div>
                         <!-- Alert Message -->
@@ -24,7 +27,7 @@
                             </div>
                         </div>
                     </form>
-                    <div class="footer-clients d-flex align-items-center">
+                    {{-- <div class="footer-clients d-flex align-items-center">
                         <div class="footer-client-img">
                             <img src="{{ asset('assets/imgs/youtube.svg') }}" alt="Youtube" />
                         </div>
@@ -37,7 +40,7 @@
                         <div class="footer-client-img">
                             <img src="{{ asset('assets/imgs/shopify.svg') }}" alt="shopify" />
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="right-content">
@@ -45,7 +48,7 @@
                         <h2>Let’s get started on something great</h2>
                         <p>Our team of IT experts looks forward to meeting with you <br>
                             and providing valuable insights tailored to your business.</p>
-                        <a href="contact.html" class="theme-btn">Get an appointment now</a>
+                        <a href="{{ route('contact.us') }}" class="theme-btn">Contactez-nous </a>
 
                         <div class="footer-experience d-flex align-items-center">
 

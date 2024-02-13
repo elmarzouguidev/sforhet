@@ -8,6 +8,7 @@
     <title>SFORHET</title>
 
     @include('layouts.__parts.fonts_links')
+    
 
     @include('layouts.__parts.css_files')
 
